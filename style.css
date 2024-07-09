@@ -1,0 +1,328 @@
+  
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+
+   background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+}
+
+.navbar-nav {
+    margin-left: auto;
+    margin-right: auto;
+}
+.container-fluid{
+  
+    font-size: 1rem;
+}
+.navbar {
+    height: 80px; 
+}
+.navbar-toggler {
+    background-color: rgb(75, 72, 104); 
+    border: none;
+}
+
+.navbar-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    
+}
+.offcanvas-body{
+    background-color: rgb(32, 31, 47);
+}
+.btn-close {
+    filter: invert(1) brightness(2); 
+}
+
+.btn-close:hover {
+    filter: invert(1) brightness(1.5); /* Slightly reduce the brightness on hover for a subtle effect */
+}
+.text-center button{
+    background-color: rgb(187, 125, 10);
+    color: white;
+    border-radius: 6px;
+    bottom: 1.3px;
+    right: 13.5px;
+    position: absolute; 
+    
+}
+/* Basic styles for the slideshow container and images */
+
+  h1 {
+    position: absolute;
+    top: 40%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    font-size: 22px;
+    padding-bottom: 70%;
+    font-weight: normal;
+    line-height: 1.5;
+    z-index: 2; 
+    animation: changeColor 10s infinite;
+    max-width: auto; 
+}
+
+@keyframes changeColor {
+    0% { color: orange; }
+    25% { color: rgb(216, 195, 243); }
+    50% { color: white; }
+    75% { color: lightblue; }
+    100% { color: orange; }
+}
+  
+  /* Animation for sliding effect */
+/* Initial animation for sliding effect */
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   bottom: 5px;
+}
+
+.slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider-inner {
+    display: flex;
+    animation: slide 6s infinite linear;
+    animation-delay: 0.2s;
+}
+
+.slider-item {
+    flex: 0 0 100%; 
+    height: -10%; 
+    transition: transform 1s ease-in-out;
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    33.33% { transform: translateX(0); }
+    44.44% { transform: translateX(-100%); }
+    77.77% { transform: translateX(-100%); }
+    88.88% { transform: translateX(-200%); }
+    100% { transform: translateX(-200%); }
+}
+
+.cont {
+  
+    text-align: center;
+    background-image: #c6daed;
+}
+
+h3 {
+    font-size: 20px;
+    padding-top: 10px; /* Adjust as needed */
+    padding-bottom: 9px; /* Adjust as needed */
+    
+}
+
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 32px;
+   
+}
+.site-section {
+    padding: 50px 0;
+   background-image: url('https://elements-video-cover-images-0.imgix.net/files/247079738/logo.jpg?auto=compress&h=800&w=1200&fit=crop&crop=edges&fm=jpeg&s=01c3759088997385cd79186527135115');
+   background-color: rgba(255, 255, 255, 0.9); /* Adjust the opacity (fourth value) as needed */
+   color: rgb(31, 30, 59);
+   background-size: cover; /* Ensure the image covers the entire background */
+   filter: blur(0.33px); /* Adjust the blur amount as needed */
+    color: rgb(31, 30, 59);
+    margin-top: -50px;
+  }
+  
+  .section-heading {
+    margin-bottom: 50px;
+  }
+  
+  
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    perspective: 1000px; /* Perspective for parallax effect */
+  }
+  
+  .card {
+    background-color: #544a7d;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(67, 65, 65, 0.1);
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+    opacity: 0;
+    transform: translateX(-100px) scale(0.9);
+    animation: slideInFromLeft 5s infinite forwards;
+    animation-delay: calc(var(--i) * 0.2s);
+    transition: transform 0.2s ease-out; /* Smooth transition for parallax effect */
+  }
+  
+  .card h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .card p {
+    color: #777;
+  }
+  
+  .card .icon {
+    font-size: 50px;
+    color: #007bff;
+    margin-bottom: 20px;
+  }
+  
+  @keyframes slideInFromLeft {
+    to {
+      transform: translateX(0) scale(1);
+      opacity: 1;
+    }
+  }
+  /*feature*/
+  .content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+  }
+  
+  .feature {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease-in-out;
+    text-align: center;
+  }
+  
+  .feature:hover {
+    transform: translateY(-5px);
+  }
+  
+  .feature h3 {
+    font-size: 1.5rem;
+    color: #edb53c;
+    margin-bottom: 10px;
+  }
+  
+  .feature p {
+    color: #444;
+    line-height: 1.6;
+  }
+  
+  .feature i {
+    color: #1d2a37;
+    margin-bottom: 10px;
+    display: block;
+  }
+  .info {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+   left: 142px;
+  }
+  .info > div {
+    flex: 1;
+    text-align: center;
+    margin: 0 10px;
+    left: 30px;
+    
+  }
+  .info h4 {
+    margin-bottom: 10px;
+  }
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footera {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Adjust spacing between elements */
+}
+
+.logo-link {
+    display: block;
+}
+
+.logo {
+    height: 50px; 
+    border-radius: 5px;
+}
+
+.powered-by {
+    margin: 0 20px; 
+}
+
+.links {
+    display: flex;
+    gap: 20px;
+}
+
+.links a {
+    color: #fff;
+    
+    transition: color 0.3s;
+}
+
+.links a:hover {
+    color: #ffcc00; /* Highlight color on hover */
+    text-decoration: none;
+}
+
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: darkorange;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.scroll-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-to-top:hover {
+    background-color: #66470d;
+}
