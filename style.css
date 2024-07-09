@@ -6,7 +6,39 @@ body{
 
    background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
 }
+@media (max-width: 768px) {
+  body {
+      font-size: 14px;
+  }
+  /* Additional styles specific to smaller devices */
+  .navbar {
+      padding: 10px;
+  }
+  .slider-item {
+      width: 100%; /* Example of adjusting image width for smaller screens */
+  }
+}
 
+/* Media query for devices with a minimum width of 1200px (large screens) */
+@media (min-width: 1200px) {
+  body {
+      font-size: 18px;
+  }
+  /* Additional styles specific to larger screens */
+  .navbar {
+      padding: 20px;
+  }
+}
+  /* Your custom styles here */
+  @media (max-width: 768px) {
+    /* Example: Adjusting styles for smaller screens */
+    .navbar-brand {
+        font-size: 14px;
+    }
+    .slider-item {
+        width: 100%; /* Adjusting image width for smaller screens */
+    }
+}
 .navbar-nav {
     margin-left: auto;
     margin-right: auto;
