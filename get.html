@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+/*pop up*/
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+.popup-content {
+   
+    background: rgb(196, 203, 202);
+    color: rgb(13, 13, 50);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.popup-content img {
+border-radius: 25%;
+width: 100%;
+max-width: 110px; 
+
+transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transformations */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow to the images */
+}
+
+.popup-content img:hover {
+transform: scale(1.05); /* Slightly enlarges the image on hover */
+box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhances the shadow on hover */
+}
+
+.popup-content img:active {
+transform: scale(0.95); /* Slightly shrinks the image on click */
+}
+.popup-content h1 {
+    margin: 0 0 10px;
+    font-size: 24px;
+}
+
+.popup-content p {
+    font-size: 16px;
+    margin: 0 0 20px;
+}
+.popup-content button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+    </style>
+</head>
+<body>
+    <div class="popup-overlay" id="popup">
+        <div class="popup-content">
+            <h1>Hello, Fitness Enthusiast!</h1>
+            <img src="https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/3c638d78-4949-4ec4-b13f-2060b071efb4/revolution-7-easyon-road-running-shoes-nNqdwt.png" alt="">
+            <p>Get ready to elevate your workouts with our top of our product</p>
+           
+            <button onclick="goBackHome()">Go back home</button>
+        </div>
+    </div>
+    
+    <script>
+        function openPopup() {
+            const popup = document.getElementById('popup');
+            popup.style.visibility = 'visible';
+            popup.style.opacity = '1';
+        }
+    
+        function closePopup() {
+            const popup = document.getElementById('popup');
+            popup.style.visibility = 'hidden';
+            popup.style.opacity = '0';
+        }
+    
+        window.onload = function() {
+            setTimeout(openPopup, 1000);  // Adjust timing as needed
+        };
+        function goBackHome() {
+        window.location.href = 'index.html'; // Replace with your home page URL
+    }
+    </script>
+    
+</body>
+</html>
